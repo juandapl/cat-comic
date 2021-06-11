@@ -4,8 +4,6 @@
 <head>
     <title>TBD CATS I guess</title>
     
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init();</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
@@ -34,10 +32,10 @@
     <div class="full" id="screen1">
         <div class="panelcontainer">
             <div id="panel1">
-
+                <img src="assets/panel1.jpg">
             </div>
             <div id="panel2">
-
+                <img src="assets/panel2.jpg">
             </div>
         </div>
         <!-- Arrow pointing downward -->
@@ -60,7 +58,12 @@
     <div class="full" id="screen2">
         <div class="panelcontainer">
             <div id="panel3">
-
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
             </div>
         </div>
         <!-- Arrow pointing downward -->
@@ -159,7 +162,7 @@
         background-color: #272727;
     }
 
-    #panel1,
+    #panel2,
     #panel4 {
 
         display: inline-block;
@@ -168,7 +171,7 @@
         height: 100%;
     }
 
-    #panel2,
+    #panel1,
     #panel5 {
 
         display: inline-block;
@@ -186,10 +189,39 @@
         height: 100%;
     }
 
+    #panel3 {
+        max-height: 50vw;
+        /*border: 1px solid #ddd;*/
+        display: flex;
+        overflow-x: auto;
+    }
+
+    #panel3::-webkit-scrollbar {
+        width: 10px;
+        background-color: #dfe6e9;
+    }
+
+    #panel3::-webkit-scrollbar-thumb {
+        background-color: black;
+        border-radius: 10px;
+    }
+
+    #panel3::-webkit-scrollbar-track {
+        border: 5px solid white;
+        background-color: pink;
+    }
+
+    #panel3 .item {
+        min-width: 40vw;
+        height: 100%;
+        text-align: center;
+        background-color: pink;
+    }
+
     img {
         object-fit: cover;
         width: 100%;
-        max-height: 100%;
+        height: 100%;
     }
     .downscroll
     {
