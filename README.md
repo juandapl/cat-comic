@@ -10,4 +10,10 @@
 ### 🐾 After settling on that story:
 #### - We created a wireframe with an even better storyline!
 ![](wireframerecording.gif)
-
+### 🐾 We then started to create the collages we planned to use as backgrounds:
+#### - Here are some of them!
+![](collageidea1.JPG)
+![](collageidea2.jpg)
+### 🐾 Then our Cat came to life:
+#### - Here he is thriving
+![](catexample.
