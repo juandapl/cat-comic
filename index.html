@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>TBD CATS I guess</title>
-
+    <title>Dinner and a Walk</title>
+    <link rel="icon" href="assets/pawprint.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Importing fonts 'bad script' (dialogues) 'caveat brush' (titles) -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,7 +14,8 @@
     <div class="full" id="title">
         <div class="panelcontainer">
             <img src="non-transparentcat3.svg" style="width: auto; margin-left: 10%;" />
-            <h1 style="position: absolute; z-index: 9; font-family: 'Caveat Brush';"></h1>
+            <h1>
+                dinner and a walk</h1>
         </div>
         <!-- Arrow pointing downward -->
         <div class="downscroll">
@@ -143,7 +144,7 @@
         </div>
         <!-- Arrow pointing downward -->
         <div class="downscroll">
-            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 752.35 464.89">
+            <svg class="arrow2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 752.35 464.89">
                 <defs>
                     <style>
                         .cls-1 {
@@ -158,8 +159,8 @@
             </svg>
         </div>
     </div>
-    <div id="fall" style="">
-
+    <div id="fall" style="height: 300vh">
+        <!-- this empty big div gives the impression of a large fall -->
     </div>
     <div class="full" id="screen3">
         <div class="panelcontainer">
@@ -191,11 +192,12 @@
                 </div>
                 <div class="textbubble" style="top: 55%; right: 3%; width: 25%;">
                     <p class="cat">
-                        I've been a good cat. Actually, a <em>great</em> cat. One of the best cats in the history of cats.
+                        I've been a good cat. Actually, a <em>great</em> cat. One of the best cats in the history of
+                        cats.
                     </p>
                     <div class="textbubblespike" style=" top: 1em; left: -1em; transform: rotate(90deg);"></div>
                 </div>
-                
+
             </div>
             <div id="panel5">
                 <div style="position:absolute; top:0%; z-index: 9; width: 85%;" class="squaretext">
@@ -223,6 +225,7 @@
                     </p>
                     <div class="textbubblespike" style="top:-1em; left: 1em; transform: rotate(180deg);"></div>
                 </div>
+                <!-- TODO - at the end of the interactivity, hide all dialogues and change the image in panel 6 to "assets/panel6 final.svg" -->
             </div>
         </div>
         <!-- Arrow pointing downward -->
@@ -295,12 +298,25 @@
         </div>
     </div>
     <div class="full" id="credits">
-
+        <p class="credits">Adina Maratkyzy
+        <br>Elina Aghabekyan
+        <br>Juan Piñeros
+        <br>Nouf AlNuaimi<br><br></p>
+        <p class="sub">
+            new york university abu dhabi - commlab summer 2021
+        </p>
     </div>
 </body>
 <style>
-    .h1 {
-        margin: auto;
+    h1 {
+        position: absolute; 
+        z-index: 9; 
+        font-family: 'Caveat Brush'; 
+        text-align: center; 
+        left: 50%; 
+        top: 50%; 
+        color: white; 
+        font-size: 4em;
     }
 
     .full {
@@ -349,6 +365,24 @@
         width: 100%;
         background-color: white;
         height: 100%;
+    }
+
+    #credits
+    {
+        padding-top: 15%;
+    }
+
+    p.credits
+    {
+        font-size: 2em;
+        font-family: 'Caveat Brush';
+        color: white;
+
+    }
+    p.sub
+    {
+        font-family: 'Caveat Brush';
+        color: white;
     }
 
     /* #panel3 {
@@ -450,6 +484,12 @@
     $(".arrow").click(function () {
         window.scrollBy({
             top: window.innerHeight,
+            behavior: 'smooth'
+        });
+    });
+    $(".arrow2").click(function () {
+        window.scrollBy({
+            top: window.innerHeight * 4,
             behavior: 'smooth'
         });
     });
