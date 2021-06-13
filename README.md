@@ -8,6 +8,6 @@
 ##### This one!
 ![](catroughsketch.JPG)
 ### 🐾 After settling on that story:
-#### - We created a wireframe!
+#### - We created a wireframe with an even better storyline!
 ![](wireframerecording.gif)
 
