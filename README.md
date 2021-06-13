@@ -16,4 +16,4 @@
 ![](collageidea2.jpg)
 ### 🐾 Then our Cat came to life:
 #### - Here he is thriving
-![](catexample.
+
