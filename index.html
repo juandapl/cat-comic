@@ -3,20 +3,18 @@
 
 <head>
     <title>TBD CATS I guess</title>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Importing fonts 'bad script' (dialogues) 'caveat brush' (titles) -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat+Brush&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat+Brush&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="full" id="title">
         <div class="panelcontainer">
-            <img
-                src="assets/titlecat.svg"
-                style="width: auto; margin-left: 10%;"
-             />
+            <img src="non-transparentcat3.svg" style="width: auto; margin-left: 10%;" />
+            <h1 style="position: absolute; z-index: 9; font-family: 'Caveat Brush';"></h1>
         </div>
         <!-- Arrow pointing downward -->
         <div class="downscroll">
@@ -44,13 +42,13 @@
                         Just another evening in the house. The Cat receives The Food from The Human.
                     </p>
                 </div>
-                <div class="textbubble" style = "top: 50%; left: 5%">
+                <div class="textbubble" style="top: 50%; left: 5%">
                     <p class="cat">
                         *sniff*
                     </p>
                     <div class="textbubblespike" style="bottom: -1em; left: 1em"></div>
                 </div>
-                <div class="textbubble" style = "top: 65%; left: 15%">
+                <div class="textbubble" style="top: 65%; left: 15%">
                     <p class="cat">
                         *sniff*
                     </p>
@@ -81,6 +79,11 @@
     <div class="full" id="screen2">
         <div class="panelcontainer">
             <div id="panel3">
+                <div style="position:absolute; top:0%; z-index: 9; width: 12%;" class="squaretext">
+                    <p class="title">
+                        The Cat roams The Street for food that’d fit its Sophisticated Taste...
+                    </p>
+                </div>
                 <div class="item">1</div>
                 <div class="item">2</div>
                 <div class="item">3</div>
@@ -110,9 +113,64 @@
         <div class="panelcontainer">
             <div id="panel4">
                 <img src="assets/panel4.png">
+                <div style="position:absolute; top:0%; z-index: 9; width: 30%;" class="squaretext">
+                    <p class="title">
+                        The trash can was <b>a trap</b>!
+                    </p>
+                </div>
+                <!-- text bubbles -->
+                <div class="textbubble" style="top: 25%; left: 3%; width: 25% ;">
+                    <p class="cat">
+                        What is this place? Surely not the <em>Cat Underworld</em>...
+                    </p>
+                    <div class="textbubblespike" style="bottom: -1em; right: 1em; transform: rotate(90deg);"></div>
+                </div>
+                <div class="textbubble" style="top: 5%; right: 5%; width: 20%;">
+                    <p class="cat">
+                        <b>AAAAAAAAAAA!</b>
+                    </p>
+                    <div class="textbubblespike" style="bottom: -1em; left: 1em"></div>
+                </div>
+                <div class="textbubble" style="top: 70%; left: 5%; width: 25%;">
+                    <p class="cat">
+                        I mean, a cat like me? In the <em>Cat Underworld</em>? Unheard of...
+                    </p>
+                    <div class="textbubblespike" style="top:-1em; right: 1em; transform: rotate(180deg);"></div>
+                </div>
+                <div class="textbubble" style="top: 55%; right: 3%; width: 25%;">
+                    <p class="cat">
+                        I've been a good cat. Actually, a <em>great</em> cat. One of the best cats in the history of cats.
+                    </p>
+                    <div class="textbubblespike" style=" top: 1em; left: -1em; transform: rotate(90deg);"></div>
+                </div>
+                
             </div>
             <div id="panel5">
+                <div style="position:absolute; top:0%; z-index: 9; width: 70%;" class="squaretext">
+                    <p class="title">
+                        This is what he feared the most his entire life... it is the <b>CAT UNDERWORLD!</b> They say greedy
+                        cats are sent here to pay for their deeds...
+                    </p>
+                </div>
                 <img src="assets/panel5.png">
+                <div class="textbubble" style="top: 30%; left: 3%; width: 25% ;">
+                    <p class="cat" style="font-size: 0.7em;">
+                        This is horrendous!
+                    </p>
+                    <div class="textbubblespike" style="top: -1em; right: 1em; transform: rotate(180deg);"></div>
+                </div>
+                <div class="textbubble" style="bottom: 3%; right: 5%; width: 20%;">
+                    <p class="cat" style="font-size: 0.7em;">
+                        PLEASE, SOMEBODY HELP ME!
+                    </p>
+                    <div class="textbubblespike" style="top: -1em; left: 2em; transform: rotate(270deg);"></div>
+                </div>
+                <div class="textbubble" style="bottom: 1%; left: 1%; width: 25%;">
+                    <p class="cat" style="font-size: 0.7em;">
+                        I shouldn’t have left home...
+                    </p>
+                    <div class="textbubblespike" style="top:-1em; left: 1em; transform: rotate(180deg);"></div>
+                </div>
             </div>
         </div>
         <!-- Arrow pointing downward -->
@@ -135,7 +193,7 @@
     <div class="full" id="screen4">
         <div class="panelcontainer">
             <div id="panel6">
-                <img src= "assets/panel6.png">
+                <img src="assets/panel6.png">
             </div>
         </div>
         <!-- Arrow pointing downward -->
@@ -170,7 +228,7 @@
         margin: auto;
         /* this is to fix a problem with margins */
         display: inline-block;
-         
+
     }
 
     .panelcontainer {
@@ -246,41 +304,41 @@
         width: 100%;
         height: 100%;
     }
-    .downscroll
-    {
-        height:5%;
+
+    .downscroll {
+        height: 5%;
         margin: auto;
         margin-top: 5%;
         position: relative;
         text-align: center;
     }
-    svg
-    {
+
+    svg {
         height: 100%;
     }
-    body
-    {
+
+    body {
         overflow: hidden;
         text-align: center;
     }
-    .squaretext
-    {
+
+    .squaretext {
         background-color: white;
         border-style: solid;
         border-width: 2px;
         padding: 1em;
         text-align: justify;
     }
-    .textbubble
-    {
+
+    .textbubble {
         background-color: white;
         padding: 1em;
         border-radius: 1em;
         width: fit-content;
         position: absolute;
     }
-    .textbubblespike
-    {
+
+    .textbubblespike {
         /*learnt from https://css-tricks.com/snippets/css/css-triangle/ */
         width: 0;
         margin: 0;
@@ -291,27 +349,28 @@
         border-right: 0.5em solid transparent;
         position: absolute;
     }
-    p.title
-    {
+
+    p.title {
         font-family: 'Caveat Brush';
     }
-    p.cat
-    {
+
+    p.cat {
         font-family: 'Bad Script';
     }
-    p{
+
+    p {
         margin: 0;
     }
 </style>
 <script>
-    
-    $(".arrow").click(function() 
-        {window.scrollBy({
+
+    $(".arrow").click(function () {
+        window.scrollBy({
             top: window.innerHeight,
             behavior: 'smooth'
         });
     });
-    
-</script>
-</html>
 
+</script>
+
+</html>
