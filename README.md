@@ -9,5 +9,5 @@
 ![](catroughsketch.JPG)
 ### 🐾 After settling on that story:
 #### - We created a wireframe!
-![](wireframerecording.mov)
+![](wireframerecording.gif)
 
