@@ -30,6 +30,6 @@ We used four full-screen layouts to distribute the content, and an interactive c
 ## Evaluation
 We are really happy with the results so far. Although our initial interactivity concept had to be changed, we managed to create the visual narrative we intended. There are, of course, some imprecisions in layout and positioning, but we hope to get better at the little details.
 
-[See the comic!] (juandapl.github.io/cat-comic)
+[See the comic!](juandapl.github.io/cat-comic)
 
 
