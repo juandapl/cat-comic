@@ -25,5 +25,11 @@ We decided for our cat to be simply drawn: it improves visibility against the co
 ### 🐾 Then the script came to life too!
 ![](script.jpg)
 ### 🐾 Then, we put the elements together in a web layout.
+We used four full-screen layouts to distribute the content, and an interactive component which, on hover, revealed the animations of each panel. As well, the comic is only scrollable through the interface we provide and not through a scrollbar, allowing the parts of the story not seen yet to stay hidden.
+
+## Evaluation
+We are really happy with the results so far. Although our initial interactivity concept had to be changed, we managed to create the visual narrative we intended. There are, of course, some imprecisions in layout and positioning, but we hope to get better at the little details.
+
+[See the comic!] (juandapl.github.io/cat-comic)
 
 
