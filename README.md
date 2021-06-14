@@ -22,7 +22,7 @@ We settled on collage backgrounds, one dominated by light tones (Cat's home) and
 We decided for our cat to be simply drawn: it improves visibility against the complex backgrounds. We composed different poses of the cat and a walking animation.
 #### - Here he is thriving!
 ![](non-transparentcat3.svg)
-### 🐾 Then the script also came to life too!
+### 🐾 Then the script came to life too!
 ![](script.jpg)
 ### 🐾 Then, we put the elements together in a web layout.
 
