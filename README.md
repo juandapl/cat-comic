@@ -24,6 +24,6 @@ We decided for our cat to be simply drawn: it improves visibility against the co
 ![](non-transparentcat3.svg)
 ### 🐾 The script also came to life!
 ![](script.jpg)
-### Then, we put the elements together in a web layout.
+### 🐾 Then, we put the elements together in a web layout.
 
 
