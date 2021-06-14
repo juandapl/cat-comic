@@ -18,6 +18,13 @@ $(".uparrow").click(function () {
     });
 });
 
+$(".uparrow2").click(function () {
+    window.scrollBy({
+        top: -window.innerHeight * 4,
+        behavior: 'smooth'
+    });
+});
+
 function catWalk() { //function to animate cat walking
     var movingCatClass = document.getElementsByClassName("moving-cat-img"); //container with images
     var xVal = -80; //horizontal position of image
