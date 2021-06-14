@@ -135,7 +135,24 @@ p.sub
     left: -200px;
 }
 
+.moving-cat-img-3 {
+    position: absolute; 
+    height: 50%; 
+    width: auto; 
+    top: 35%; 
+    left: -200px;
+}
+
 #sitting-cat-img {
+    position: absolute; 
+    height:30%; 
+    width: auto; 
+    top: 60%; 
+    left: 900px;
+    opacity: 0;
+}
+
+#sitting-cat-img-2 {
     position: absolute; 
     height:30%; 
     width: auto; 

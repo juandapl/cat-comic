@@ -11,13 +11,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat+Brush&display=swap" rel="stylesheet">
     </head>
 
-    <body>
-        <div class="full" id="title">
+    <body >
+        <audio src="audio_main.mp3" id="audio1" autoplay="true"></audio>
+        <audio src="dark-forest.mp3" id="audio2"></audio>
+        
+        <div class="full" id="title" >
             <div class="panelcontainer">
                 <img src="non-transparentcat3.svg" style="width: auto; margin-left: 10%;" />
+                <img id="audioicon" onclick="volumeControl()" src="soundon.png" style="position: relative; display: flex; height: 10%; width: auto; left: 10%; bottom: 10%;">
+
                 <h1>
                     dinner and a walk</h1>
             </div>
+
             <!-- Arrow pointing downward -->
             <div class="downscroll">
                 <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 752.35 464.89">
@@ -53,7 +59,7 @@
                 </svg>
             </div>
             <div class="panelcontainer">
-                <div id="panel1">
+                <div id="panel1" style="overflow: hidden;">
                     <div class="img-overlay-wrap">
                         <img src="assets/panel1.jpg"/>
                         <svg viewBox="0 0 100 100">
@@ -234,33 +240,36 @@
             </div>
             <div class="panelcontainer">
                 <div id="panel4">
-                    <img src="assets/panel4.png">
+                    <img src="assets/panel4.png" style="position: relative; top: 0; left: 0">
                     <div id="overlay4" class="cover-layer"></div>
+                    <img id="catface" src="catface.svg" style="position: absolute; display: flex; height: 50%; width: auto; top: 25%; left: 25%; opacity: 0">
+                    
+                    
                     <div id="title4" style="position:absolute; top:0%; z-index: 9; width: 30%;" class="squaretext">
                         <p class="title">
                             The trash can was <b>a trap</b>!
                         </p>
                     </div>
                     <!-- text bubbles -->
-                    <div id="text42" class="textbubble" style="top: 25%; left: 3%; width: 25% ;">
+                    <div id="text42" class="textbubble" style="top: 15%; left: 3%; width: 25% ; opacity: 0">
                         <p class="cat">
                             What is this place? Surely not the <em>Cat Underworld</em>...
                         </p>
                         <div class="textbubblespike" style="bottom: -1em; right: 1em; transform: rotate(90deg);"></div>
                     </div>
-                    <div id="text43" class="textbubble" style="top: 5%; right: 5%; width: 20%;">
+                    <div id="text43" class="textbubble" style="top: 17%; right: 10%; width: 20%; opacity: 0">
                         <p class="cat">
                             <b>AAAAAAAAAAA!</b>
                         </p>
                         <div class="textbubblespike" style="bottom: -1em; left: 1em"></div>
                     </div>
-                    <div id="text44" class="textbubble" style="top: 70%; left: 5%; width: 25%;">
+                    <div id="text44" class="textbubble" style="top: 65%; left: 5%; width: 25%; opacity: 0">
                         <p class="cat">
                             I mean, a cat like me? In the <em>Cat Underworld</em>? Unheard of...
                         </p>
                         <div class="textbubblespike" style="top:-1em; right: 1em; transform: rotate(180deg);"></div>
                     </div>
-                    <div id="text45" class="textbubble" style="top: 55%; right: 3%; width: 25%;">
+                    <div id="text45" class="textbubble" style="top: 60%; right: 3%; width: 25%; opacity: 0">
                         <p class="cat">
                             I've been a good cat. Actually, a <em>great</em> cat. One of the best cats in the history of
                             cats.
@@ -270,28 +279,30 @@
 
                 </div>
                 <div id="panel5">
-                    <div id="title5" style="position:absolute; top:0%; z-index: 9; width: 85%;" class="squaretext">
+                    
+                    <img src="assets/panel5.png">
+                    <div id="overlay5" class="cover-layer"></div>
+                    <div id="title5" style="position:absolute; top:0%; z-index: 9; width: 85%; opacity: 0" class="squaretext">
                         <p class="title">
                             It is indeed the <b>CAT UNDERWORLD!</b> They say greedy
                             cats are sent here to pay for their deeds...
                         </p>
                     </div>
-                    <img src="assets/panel5.png">
-                    <div id="overlay5" class="cover-layer"></div>
-                    <div class="textbubble" style="top: 30%; left: 3%; width: 25% ;">
-                        <p class="cat" style="font-size: 0.7em;">
+                    <img id="cat-stairs" src="walkingcat1.svg" style="position: absolute; display: flex; height: 20%; width: auto; top: 35%; left: 50%; transform: rotate(-60deg); opacity: 0" />
+                    <div id="text51" class="textbubble" style="top: 30%; left: 3%; width: 25% ; opacity: 0">
+                        <p class="cat" >
                             This is horrendous!
                         </p>
                         <div class="textbubblespike" style="top: -1em; right: 1em; transform: rotate(180deg);"></div>
                     </div>
-                    <div class="textbubble" style="bottom: 3%; right: 5%; width: 20%;">
-                        <p class="cat" style="font-size: 0.7em;">
+                    <div id="text52" class="textbubble" style="bottom: 3%; right: 5%; width: 20%; opacity: 0">
+                        <p class="cat">
                             PLEASE, SOMEBODY HELP ME!
                         </p>
                         <div class="textbubblespike" style="top: -1em; left: 2em; transform: rotate(270deg);"></div>
                     </div>
-                    <div class="textbubble" style="bottom: 1%; left: 1%; width: 25%;">
-                        <p class="cat" style="font-size: 0.7em;">
+                    <div id="text53" class="textbubble" style="bottom: 10%; left: 10%; width: 25%; opacity: 0">
+                        <p class="cat" >
                             I shouldn’t have left home...
                         </p>
                         <div class="textbubblespike" style="top:-1em; left: 1em; transform: rotate(180deg);"></div>
@@ -299,7 +310,6 @@
                     <!-- TODO - at the end of the interactivity, hide all dialogues and change the image in panel 6 to "assets/panel6 final.svg" -->
                 </div>
             </div>
-            <!-- Arrow pointing downward -->
             <div class="downscroll">
                 <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 752.35 464.89">
                     <defs>
@@ -334,37 +344,46 @@
                 </svg>
             </div>
             <div class="panelcontainer">
-                <div id="panel6">
-                    <img src="assets/panel6.png">
-                    <div style="position:absolute; top:0%; z-index: 9; width: 25%;" class="squaretext">
-                        <p class="title">
+                <div id="panel6" style="overflow: hidden;">
+                    <img id="panel6-img" src="assets/panel6.png">
+                    <div id="overlay6" class="cover-layer"></div>
+
+                    <img class="moving-cat-img-3" src="walkingcat1.svg" style="display:none;" />
+                    <img class="moving-cat-img-3" src="walkingcat2.svg" style="display:none;" />
+                    <img class="moving-cat-img-3" src="walkingcat3.svg" style="display:none;" />
+                    <img class="moving-cat-img-3" src="walkingcat4.svg" style="display:none;" />
+                    <div  style="position:absolute; top:0%; z-index: 9; width: 25%;" class="squaretext">
+                        <p id="title6" class="title">
                             The Cat reached the gates of the <b>CAT UNDERWORLD!</b>. Only one of them will let him out...
                         </p>
                     </div>
-                    <div class="textbubble" style="top: 50%; left: 3%; width: 15% ;">
+                    <div id="text61" class="textbubble" style="top: 25%; left: 3%; width: 15% ; opacity: 0">
                         <p class="cat">
                             An exit! Let me peek, maybe they’ll take me somewhere...
                         </p>
                         <div class="textbubblespike" style="bottom: -1em; right: 1em; transform: rotate(90deg);"></div>
                     </div>
-                    <div class="textbubble" style="top: 35%; left: 28%; width: 15%;">
+                    <div id="text62" class="textbubble" style="top: 25%; left: 28%; width: 15%; opacity: 0">
                         <p class="cat">
                             This doesn’t seem like home...
                         </p>
                         <div class="textbubblespike" style="bottom: -1em; left: 1em"></div>
                     </div>
-                    <div class="textbubble" style="top: 70%; left: 53%; width: 15%;">
+                    <div id="text63" class="textbubble" style="top: 85%; left: 53%; width: 15%; opacity: 0">
                         <p class="cat">
                             I’m afraid of going there...
                         </p>
-                        <div class="textbubblespike" style="top:-1em; right: 1em; transform: rotate(180deg);"></div>
+                        <div class="textbubblespike" style="top:-1em; left: 1em; transform: rotate(270deg);"></div>
                     </div>
-                    <div class="textbubble" style="bottom: 6%; right: 3%; width: 15%;">
+                    <div id="text64" class="textbubble" style="top: 85%; right: 3%; width: 15%; opacity: 0">
                         <p class="cat">
                             It’s no use.
                         </p>
                         <div class="textbubblespike" style="top:-1em; left: 1em; transform: rotate(270deg);"></div>
                     </div>
+                    <img id="sitting-cat-img-2" src="non-transparentcat.svg">
+
+
                 </div>
             </div>
             <!-- Arrow pointing downward -->

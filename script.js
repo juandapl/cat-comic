@@ -25,6 +25,28 @@ $(".uparrow2").click(function () {
     });
 });
 
+var audio1 = document.getElementById("audio1");
+var audio2 = document.getElementById("audio2");
+
+function playMain() {
+    audio1.play();
+    audio1.volume=0.5;
+}
+
+function volumeControl() {
+    audio1.play();
+    if (audio1.volume>0) {
+        audio1.pause();
+        audio1.volume=0;
+        document.getElementById("audioicon").src="soundoff.svg";
+    }
+    else if (audio1.volume==0) {
+        audio1.volume=0.2;
+        audio1.play();
+        document.getElementById("audioicon").src="soundon.png";
+    }
+}
+
 function catWalk() { //function to animate cat walking
     var movingCatClass = document.getElementsByClassName("moving-cat-img"); //container with images
     var xVal = -80; //horizontal position of image
@@ -108,6 +130,57 @@ function catWalk2() { //function to animate cat walking
     }   
 }
 
+function catWalk3() { //function to animate cat walking
+    var s=0;
+    var movingCatClass3 = document.getElementsByClassName("moving-cat-img-3"); //container with images
+    var xVal = -200; //horizontal position of image
+    var i=0; //image number
+    var time = setInterval (frame, 150);
+    function frame() {
+        if (s>=25 && s<=50 || s>=60 && s<=95 || s>=120 && s<=155 || s>=190 && s<=215 || s>=225 && s<=565) { //if got to the needed x coordinate -> reset vals
+            s+=1;
+            if (s>=260) {
+                document.getElementById("panel6-img").src="assets/panel6-final.png";
+                document.getElementById("text61").style.opacity=0;
+                document.getElementById("text62").style.opacity=0;
+                document.getElementById("text63").style.opacity=0;
+                document.getElementById("text64").style.opacity=0;
+                document.getElementById("title6").innerHTML="It was all a dream. Cat was safe and well in the house."
+                audio1.play();
+            }
+            if (s>=245) {
+                document.getElementById("sitting-cat-img-2").style.opacity=1;
+                movingCatClass3[i-1].style.display="none";
+            }
+        }
+        else if (s>565) {
+            clearInterval(time);
+        }
+        else {
+            var x = xVal + "px";
+            movingCatClass3[i].style.left=x; //x placement of image
+
+            xVal += 10; //update x
+            s+=1;
+
+            if (i==0) { //image display properties update
+                movingCatClass3[i].style.display="inline-flex";
+                movingCatClass3[3].style.display="none";
+            }
+            else {
+                movingCatClass3[i-1].style.display="none";
+                movingCatClass3[i].style.display="inline-flex";
+            }
+
+            i=i+1; //update image number
+
+            if (i==4) { //if image number > actual number of images -> start over
+                i=0;
+            }
+        }
+    }   
+}
+
 // function freeFall() {
 //     var opacityVal=5;
 //     var opacityVal2=-5;
@@ -152,6 +225,9 @@ var panel6 = document.getElementById("panel6");
 var overlay1 = document.getElementById("overlay1");
 var overlay2 = document.getElementById("overlay2");
 var overlay3 = document.getElementById("overlay3");
+var overlay4 = document.getElementById("overlay4");
+var overlay5 = document.getElementById("overlay5");
+var overlay6 = document.getElementById("overlay6");
 var textBubble = document.getElementsByClassName("textbubble");
 // var coverLayer = document.getElementsByClassName("cover-layer");
 var panelContainer = document.getElementsByClassName("panelcontainer");
@@ -159,11 +235,15 @@ var panelContainer = document.getElementsByClassName("panelcontainer");
 panel1.addEventListener("mouseover",showPanel1);
 panel2.addEventListener("mouseover",showPanel2);
 panel3.addEventListener("mouseover",showPanel3);
+panel4.addEventListener("mouseover",showPanel4);
+panel5.addEventListener("mouseover",showPanel5);
+panel6.addEventListener("mouseover",showPanel6);
 
 panel1Shown = false;
 function showPanel1() {
     if(!panel1Shown)
     {
+        audio1.play();
         var opacityVal=0.9;
         var opacityVal2=-1.5;
         var time = setInterval (frame, 100);
@@ -214,6 +294,8 @@ function showPanel3() {
         var time = setInterval (frame, 150);
         function frame() {
             if (opacityVal2>=14) {
+                audio1.pause();
+                audio2.play();
                 var yVal = 40;
                 var degreeTurn = 0;
                 clearInterval(time);
@@ -250,9 +332,86 @@ function showPanel3() {
                 opacityVal2+=0.1;
             }
         }
-        panel3shown = true;
-        catWalk2();
+    panel3shown = true;
+    catWalk2();
     }
 }
 
-function showPanel4() {}
+panel4shown = false;
+function showPanel4() {
+    if(!panel4shown)
+    {
+        opacityVal=0.9;
+        opacityVal2=-3.5;
+        var time = setInterval (frame, 100);
+        function frame() {
+            if(opacityVal2>=17) {
+                clearInterval(time);
+            }
+            else {
+                overlay4.style.opacity=opacityVal;
+                opacityVal=opacityVal-0.1;
+                document.getElementById("catface").style.opacity=opacityVal2+1;
+                document.getElementById("text43").style.opacity=opacityVal2-2;
+                document.getElementById("text42").style.opacity=opacityVal2-6;
+                document.getElementById("text44").style.opacity=opacityVal2-10;
+                document.getElementById("text45").style.opacity=opacityVal2-14;
+                opacityVal2+=0.1;
+            }
+        }
+    panel4shown = true;
+    }
+}
+
+panel5shown = false;
+function showPanel5() {
+    if(!panel5shown)
+    {
+        opacityVal=0.9;
+        opacityVal2=-3.5;
+        var time = setInterval (frame, 100);
+        function frame() {
+            if(opacityVal2>=17) {
+                clearInterval(time);
+            }
+            else {
+                overlay5.style.opacity=opacityVal;
+                opacityVal=opacityVal-0.1;
+                document.getElementById("title5").style.opacity=opacityVal2;
+                document.getElementById("cat-stairs").style.opacity=opacityVal2;
+                document.getElementById("text51").style.opacity=opacityVal2-2;
+                document.getElementById("text52").style.opacity=opacityVal2-6;
+                document.getElementById("text53").style.opacity=opacityVal2-10;
+                opacityVal2+=0.1;
+            }
+        }
+    panel5shown = true;
+    }
+}
+
+
+panel6shown = false;
+function showPanel6() {
+    if(!panel6shown)
+    {
+        opacityVal=0.9;
+        opacityVal2=-2.5;
+        var time = setInterval (frame, 150);
+        function frame() {
+            if(opacityVal2>=20) {
+                clearInterval(time);
+            }
+            else {
+                overlay6.style.opacity=opacityVal;
+                opacityVal=opacityVal-0.1;
+                document.getElementById("text61").style.opacity=opacityVal2;
+                document.getElementById("text62").style.opacity=opacityVal2-4.5;
+                document.getElementById("text63").style.opacity=opacityVal2-12;
+                document.getElementById("text64").style.opacity=opacityVal2-21;
+                opacityVal2+=0.1;
+            }
+        }
+        panel6shown = true;
+        catWalk3();
+    }
+}
