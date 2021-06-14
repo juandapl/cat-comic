@@ -310,10 +310,10 @@ function showPanel3() {
                         document.getElementById("title3").style.opacity=0;
                         overlay3.style.opacity=0.9;
                         document.getElementById("falling-cat-img").style.top=y;
-                        window.scrollBy({
-                            top: window.innerHeight*2.5+75,
-                            behavior: 'smooth'
-                        });
+                        // window.scrollBy({
+                        //     top: window.innerHeight*2.5+75,
+                        //     behavior: 'smooth'
+                        // });
                         degree="rotate("+degreeTurn+"deg)";
                         document.getElementById("falling-cat-img").style.transform=degree;
                         degreeTurn+=45;
