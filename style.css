@@ -1,0 +1,239 @@
+h1 {
+    position: absolute; 
+    z-index: 9; 
+    font-family: 'Caveat Brush'; 
+    text-align: center; 
+    left: 50%; 
+    top: 50%; 
+    color: white; 
+    font-size: 4em;
+}
+
+.full {
+    width: 80vw;
+    height: 100vh;
+    margin: auto;
+    /* this is to fix a problem with margins */
+    display: inline-block;
+
+}
+
+.panelcontainer {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+body {
+    background-color: #272727;
+}
+
+#panel2,
+#panel4 {
+    position: relative;
+    display: inline-block;
+    width: 57%;
+    background-color: white;
+    height: 100%;
+}
+
+#panel1,
+#panel5 {
+    position: relative;
+    display: inline-block;
+    width: 38%;
+    background-color: white;
+    height: 100%;
+
+}
+
+#panel3,
+#panel6 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+}
+
+#panel1,
+#panel2,
+#panel3,
+#panel4,
+#panel5,
+#panel6 {
+    transition-duration: 3s;
+}
+
+#credits
+{
+    padding-top: 15%;
+}
+
+p.credits
+{
+    font-size: 2em;
+    font-family: 'Caveat Brush';
+    color: white;
+
+}
+p.sub
+{
+    font-family: 'Caveat Brush';
+    color: white;
+}
+
+.img-overlay-wrap {
+    position: relative;
+    display: inline-block; /* <= shrinks container to image size */
+    overflow: hidden;
+}
+
+.img-overlay-wrap svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+
+.cover-layer {
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.9;
+    position: absolute;
+    bottom: 0; 
+}
+
+.moving-cat-img {
+    position: absolute; 
+    height: 80%; 
+    width: auto; 
+    top: 30%; 
+    left: -30%;
+}
+
+.moving-cat-img-2 {
+    position: absolute; 
+    height: 50%; 
+    width: auto; 
+    top: 45%; 
+    left: -200px;
+}
+
+#sitting-cat-img {
+    position: absolute; 
+    height:30%; 
+    width: auto; 
+    top: 60%; 
+    left: 900px;
+    opacity: 0;
+}
+
+#falling-cat-img {
+    position: absolute; 
+    height:50%; 
+    width: auto; 
+    top: 40%; 
+    left: 900px;
+    transform: rotate(0deg);
+    opacity: 0;
+}
+
+/* #panel3 {
+    max-height: 50vw;
+    border: 1px solid #ddd;
+    display: flex;
+    overflow-x: auto;
+} */
+
+/* #panel3::-webkit-scrollbar {
+    width: 10px;
+    background-color: #dfe6e9;
+}
+
+#panel3::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+}
+
+#panel3::-webkit-scrollbar-track {
+    border: 5px solid white;
+    background-color: pink;
+}
+
+#panel3 .item {
+    min-width: 40vw;
+    height: 100%;
+    text-align: center;
+    background-color: pink;
+} */
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.downscroll {
+    height: 5%;
+    margin: auto;
+    margin-top: 5%;
+    position: relative;
+    text-align: center;
+}
+
+svg {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    text-align: center;
+}
+
+.squaretext {
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 1em;
+    text-align: justify;
+    display: block;
+}
+
+.textbubble {
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+    width: fit-content;
+    position: absolute;
+    box-shadow: 5px 5px 3px black;
+}
+
+.textbubblespike {
+    /*learnt from https://css-tricks.com/snippets/css/css-triangle/ */
+    width: 0;
+    margin: 0;
+    height: 0;
+    border-top: 0.5em solid white;
+    border-left: 0.5em solid white;
+    border-bottom: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    position: absolute;
+}
+
+p.title {
+    font-family: 'Caveat Brush';
+    font-size: 1.3em;
+}
+
+p.cat {
+    font-family: 'Bad Script';
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+}
