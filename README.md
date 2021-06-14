@@ -23,7 +23,7 @@ We decided for our cat to be simply drawn: it improves visibility against the co
 #### - Here he is thriving!
 ![](non-transparentcat3.svg)
 ### 🐾 The script also came to life!
-![](script.JPEG)
+![](script.jpg)
 ### Then, we put the elements together in a web layout.
 
 
